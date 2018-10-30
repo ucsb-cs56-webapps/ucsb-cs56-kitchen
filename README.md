@@ -146,5 +146,5 @@ Here are the javadocs for the items referred to in this small `Application.java`
 
 * [`SpringBootApplication`](https://docs.spring.io/spring-boot/docs/current/api/index.html?org/springframework/boot/autoconfigure/SpringBootApplication.html)
 * [`SpringApplication`](https://docs.spring.io/spring-boot/docs/current/api/index.html?org/springframework/boot/autoconfigure/SpringApplication.html)
-* [`SpringApplication.run`](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/SpringApplication.html#run-java.lang.String...-)
+* [`SpringApplication.run`](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/SpringApplication.html#run-java.lang.Class-java.lang.String...-)
 
