@@ -8,7 +8,7 @@ while adding freemarker templates
 
 * We started with this repo: <https://github.com/pconrad-webapps/spring-boot-minimal-demo>
 
-* We then tried to add only the minimum essentials to be able to work with Freemarker templates, plus Bootstrap for common navigation.
+* We then tried to add only the minimum essentials to be able to work with Freemarker templates
 
 We relied on this tutorial for information about Freemarker:
 
