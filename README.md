@@ -151,3 +151,17 @@ Here are the javadocs for the items referred to in this small `Application.java`
 |[`SpringApplication`](https://docs.spring.io/spring-boot/docs/current/api/index.html?org/springframework/boot/autoconfigure/SpringApplication.html)| A class with a static method called `run` that can be used to start up the Spring Boot application.|
 |[`SpringApplication.run(Class<?> primarySource, String... args`](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/SpringApplication.html#run-java.lang.Class-java.lang.String...-)| The method used to start up the application.  We pass in the class where the main is defined, and the arguments that were passed in to that main.|
 
+There is more to uncover here, and we won't try to uncover all of it right away.
+
+Just one note about this annotation `@SpringBootApplication`. 
+
+Apparently `@SpringBootApplication` is apparently a convenient way to apply three other annotations all at once.  Eventually, we'll need to learn more about what these do.  Those are:
+
+| Annotation | 
+|-|
+|[`@Configuration`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Configuration.html)|
+|[`@EnableAutoConfiguration`](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/EnableAutoConfiguration.html)
+|[`@ComponentScan`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/ComponentScan.html)
+ 
+ The idea of a `@Bean` is apparently important here as well.  More to come!
+2
