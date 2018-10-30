@@ -142,5 +142,9 @@ on <http://localhost:8080>:
 ![Screenshot of browser running on http://localhost:8080](/images/localhost_8080.png)
 
 
+Here are the javadocs for the items referred to in this small `Application.java` file:
 
+* [`SpringBootApplication`](https://docs.spring.io/spring-boot/docs/current/api/index.html?org/springframework/boot/autoconfigure/SpringBootApplication.html)
+* [`SpringApplication`](https://docs.spring.io/spring-boot/docs/current/api/index.html?org/springframework/boot/autoconfigure/SpringApplication.html)
+* [`SpringApplication.run`](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/SpringApplication.html#run-java.lang.String...-)
 
