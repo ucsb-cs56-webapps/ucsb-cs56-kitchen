@@ -67,12 +67,13 @@ According to the tutorial, this:
 Here is the [documentation for the spring-boot-maven-plugin](https://docs.spring.io/spring-boot/docs/2.1.0.RELEASE/maven-plugin/)
 
 We note there that the `spring-boot-maven-plugin` provides these `mvn` commands:
-| command | explanation |
-|-|-|
-|`spring-boot:run|runs your Spring Boot application.|
-|`spring-boot:repackage| repackages your jar/war to be executable.|
-|`spring-boot:start|  manage the lifecycle of your Spring Boot application (i.e. for integration tests).|
-|`spring-boot:stop |  (see `spring-boot:start`)|
+
+| command                | explanation |
+|------------------------|-------------|
+|`spring-boot:run`       | runs your Spring Boot application.|
+|`spring-boot:repackage` | repackages your jar/war to be executable.|
+|`spring-boot:start`     | manage the lifecycle of your Spring Boot application (i.e. for integration tests).|
+|`spring-boot:stop`      | (see `spring-boot:start`) |
 |`spring-boot:build-info`| generates build information that can be used by the Actuator.|
 
 
