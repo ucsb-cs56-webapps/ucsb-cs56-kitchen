@@ -144,7 +144,9 @@ on <http://localhost:8080>:
 
 Here are the javadocs for the items referred to in this small `Application.java` file:
 
-* [`SpringBootApplication`](https://docs.spring.io/spring-boot/docs/current/api/index.html?org/springframework/boot/autoconfigure/SpringBootApplication.html)
-* [`SpringApplication`](https://docs.spring.io/spring-boot/docs/current/api/index.html?org/springframework/boot/autoconfigure/SpringApplication.html)
-* [`SpringApplication.run(Class<?> primarySource, String... args`](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/SpringApplication.html#run-java.lang.Class-java.lang.String...-)
+| Item | Description |
+|------|-------------|
+|`SpringBootApplication`](https://docs.spring.io/spring-boot/docs/current/api/index.html?org/springframework/boot/autoconfigure/SpringBootApplication.html)| Annotation (`@SpringBootApplication`) that you put on the class containing your `main`.|
+|`SpringApplication`](https://docs.spring.io/spring-boot/docs/current/api/index.html?org/springframework/boot/autoconfigure/SpringApplication.html)| A class with a static method called `run` that can be used to start up the Spring Boot application.|
+|`SpringApplication.run(Class<?> primarySource, String... args`](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/SpringApplication.html#run-java.lang.Class-java.lang.String...-)| The method used to start up the application.  We pass in the class where the main is defined, and the arguments that were passed in to that main.|
 
