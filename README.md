@@ -104,7 +104,34 @@ public class HelloController {
 }
 ```
 
+This appears to be mapping the route `/` in the webapp to a page with a `Hello, World` type message: `Greetings from Spring Boot!`.
+
+Let's see if we can build on that, a little at a time.
+
 Here are links to the Javadoc (from the [Spring Framework Javadoc](https://docs.spring.io/spring-framework/docs/current/javadoc-api/index.html?overview-summary.html)) for the items referred to here:
 * [`RestController`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springf)
 * [`RequestMapping`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/RequestMapping.html)
 
+At this point the project compiles, but `mvn spring-boot:run` reports that there is no main class:
+
+```
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:2.0.5.RELEASE:run (default-cli) on project gs-spring-boot: Unable to find a suitable main class, please add a 'mainClass' property -> [Help 1]
+```
+
+So, we'll need to add one of those.  We'll base it on the one from the tutorial, but we'll simplify a bit, trying to put in only the minimal amount of code needed.
+
+
+```
+package edu.ucsb.cs56.pconrad.springboot.hello;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Application {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+}
+```
