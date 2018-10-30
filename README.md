@@ -157,11 +157,25 @@ Just one note about this annotation `@SpringBootApplication`.
 
 Apparently `@SpringBootApplication` is apparently a convenient way to apply three other annotations all at once.  Eventually, we'll need to learn more about what these do.  Those are:
 
-| Annotation | 
-|-|
-|[`@Configuration`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Configuration.html)|
-|[`@EnableAutoConfiguration`](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/EnableAutoConfiguration.html)
-|[`@ComponentScan`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/ComponentScan.html)
+| Annotation | Description |
+|-|-|
+|[`@Configuration`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Configuration.html)|"Indicates that a class declares one or more @Bean methods and may be processed by the Spring container to generate bean definitions and service requests for those beans at runtime... "|
+|[`@EnableAutoConfiguration`](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/EnableAutoConfiguration.html)| |
+|[`@ComponentScan`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/ComponentScan.html)| |
  
- The idea of a `@Bean` is apparently important here as well.  More to come!
-2
+So, the idea of a Java Bean is going to be pretty important.  This "processing of Bean definitions" is part of the idea of "dependency injection" on which Spring is based.   
+
+# Autoconfiguration and Dependency Injection
+
+The basic idea is that the Java code essentially "inspects itself" at run time to "wire itself up" so that you don't have to do all the work yourself.  Some of the code you would normally need to write&mdash;well, you don't have to write it.    The code "already knows" what you probably want to do, and how you want it done based on what classes you put where.   It may seem like a bit of "magic" if you don't know what's going on.   
+
+There is far more to say about this topic, but we'll need to progress a little at a time.
+
+# A parting thought (Editorial Commentary)
+
+With large complex frameworks such as Spring Boot (or Rails, or other "convention over configuration" frameworks) In practice, the way to succeed is to:
+* Learn enough about what is going on that you can harness the power and get done what you need to get done, and not get surprised
+* Let go of the need to know *everything* that is going on, because if you insist on that, you likely won't be very productive.   By the time you learn "everything" about the framework, it will have changed, or become obsolete.
+
+
+
