@@ -18,7 +18,7 @@ src/main/java/edu/ucsb/cs56/pconrad/springboot/hello/HelloController.java
 (Originally: src/main/java/hello/HelloController.java)
 
 ```java
-package hello;
+package edu.ucsb.cs56.pconrad.springboot.hello;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
