@@ -77,4 +77,55 @@ src/main/resources/templates/index.ftl
 
 # Replacing our hard coded page with this page
 
-Now, 
+Previously, our `HelloController.java` file looked like this:
+
+```
+package edu.ucsb.cs56.pconrad.springboot.hello;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
+public class HelloController {
+
+    @RequestMapping("/")
+    public String index() {
+        return "Greetings from Spring Boot!";
+    }
+
+}
+```
+
+We are going to:
+* Change `@RestController` to `@Controller`.   
+* Add the needed import for [`org.springframework.stereotype.Controller`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Controller.html)
+* Change the return value of `index` to the string `"index"` which references the filename part of `"index.ftl"`
+
+```
+src/main/java/edu/ucsb/cs56/pconrad/springboot/hello/HelloController.java 
+```
+
+```java
+package edu.ucsb.cs56.pconrad.springboot.hello;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HelloController {
+
+    @RequestMapping("/")
+    public String index() {
+        return "index";
+    }
+
+}
+```
+
+And that's all there is to it!
+
+When we run `mvn spring-boot:run` we get:
+
+![screenshot of app running on localhost 8080](/images/localhost_8080.png)
+
+
