@@ -135,3 +135,12 @@ public class Application {
     }
 }
 ```
+
+And there it is: with these two files, and the `pom.xml` above, we have a minimal `Hello World` style app for Spring Boot running
+on <http://localhost:8080>:
+
+![Screenshot of browser running on http://localhost:8080](/images/localhost_8080.png)
+
+
+
+
