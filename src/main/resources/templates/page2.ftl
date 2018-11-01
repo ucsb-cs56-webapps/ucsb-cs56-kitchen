@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>Spring Boot Freemarker Demo</title>
+   <title>Page 2</title>
    <#include "head.ftl" />
  </head>
  <body>
    <#include "navbar.ftl" />
-   <h1>Spring Boot with Freemarker</h1>
-  <p>Hello, World!</p>
+   <h1>This is Page 2</h1>
+  <p>What, you were expecting something awesome?</p>
  </body>
 </html>

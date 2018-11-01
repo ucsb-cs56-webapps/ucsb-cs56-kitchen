@@ -11,4 +11,20 @@ public class HelloController {
         return "index";
     }
 
+	@RequestMapping("/page1")
+    public String page1() {
+        return "page1";
+    }
+
+	@RequestMapping("/page2")
+	public String page2() {
+        return "page2";
+    }
+
+	@RequestMapping("/page3")
+	public String page3() {
+        return "page3";
+    }
+
+	
 }
