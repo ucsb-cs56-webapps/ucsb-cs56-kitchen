@@ -11,14 +11,14 @@ public class HelloController {
         return "index";
     }
 
-	@RequestMapping("/page1")
-    public String page1() {
-        return "page1";
+	@RequestMapping("/ingridients")
+    public String ingridients() {
+        return "ingridients";
     }
 
-	@RequestMapping("/page2")
-	public String page2() {
-        return "page2";
+	@RequestMapping("/recipes")
+	public String recipes() {
+        return "recipes";
     }
 
 	@RequestMapping("/page3")
