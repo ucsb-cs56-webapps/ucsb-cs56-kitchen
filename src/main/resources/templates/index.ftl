@@ -7,6 +7,6 @@
  <body>
    <#include "navbar.ftl" />
    <h1>Spring Boot with Freemarker</h1>
-  <p>Hello, World!</p>
+  <p>This is a Webapp to help find you recipes you could create with only the ingredients found in your kitchen!</p>
  </body>
 </html>

@@ -11,9 +11,9 @@ public class HelloController {
         return "index";
     }
 
-	@RequestMapping("/ingridients")
+	@RequestMapping("/ingredients")
     public String ingridients() {
-        return "ingridients";
+        return "ingredients";
     }
 
 	@RequestMapping("/recipes")
