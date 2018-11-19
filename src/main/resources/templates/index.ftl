@@ -6,7 +6,7 @@
    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
    <script>
    var config = {
-	    apiKey: "AIzaSyAGkfj8zadgq47cPk39d15jJeco68c4BLg",
+	    apiKey: "",
 	    authDomain: "kitchen-ingredients-1a9ea.firebaseapp.com",
 	    databaseURL: "https://kitchen-ingredients-1a9ea.firebaseio.com",
 	    projectId: "kitchen-ingredients-1a9ea",
