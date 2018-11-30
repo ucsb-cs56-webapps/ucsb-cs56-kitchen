@@ -21,3 +21,18 @@ https://www.allrecipes.com/recipe/255950/citrus-baked-fish/?internalSource=staff
 
 5. Black Bean and Corn Quesadillas
 https://www.allrecipes.com/recipe/104850/black-bean-and-corn-quesadillas/?internalSource=hub%20recipe&referringContentType=Search
+
+6. Korean Ground Beef Bowl
+https://www.allrecipes.com/recipe/268091/easy-korean-ground-beef-bowl/?internalSource=hub%20recipe&referringContentType=Search
+
+7. Meatballs
+https://www.allrecipes.com/recipe/213742/meatball-nirvana/?internalSource=hub%20recipe&referringContentType=Search
+
+8. Hamburgers
+https://www.allrecipes.com/recipe/49404/juiciest-hamburgers-ever/?internalSource=hub%20recipe&referringContentType=Search
+
+9. Sausage Pasta
+https://www.allrecipes.com/recipe/19291/sausage-pasta/?internalSource=hub%20recipe&referringContentType=Search
+
+10. Scrambled Eggs
+https://www.allrecipes.com/recipe/256007/best-scrambled-eggs/?internalSource=hub%20recipe&referringContentType=Search
