@@ -26,7 +26,7 @@
    <#include "head.ftl" />
  </head>
  <body>
-   <#include "navbar.ftl" />
+   <button onclick = "location.href='recipes'" type = "button"> Go to Recipes </button>
    <h1>This is Ingredients</h1>
   <p>Same stuff, different page</p>
 
