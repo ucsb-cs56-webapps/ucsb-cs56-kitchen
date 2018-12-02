@@ -2,24 +2,10 @@
 <html>
  <head>
    <style>
-
     table, td {
       border: 1px solid black;
     }
 
-    table {
-      counter-reset: rowNumber;
-    }
-
-    table tr {
-      counter-increment: rowNumber;
-    }
-
-    table tr td:first-child::before {
-      content: counter(rowNumber);
-      min-width: 1em;
-      margin-right: 0.5em;
-    }
   </style>
 
    <title>Ingredients</title>
@@ -41,6 +27,23 @@ Select your ingredient:
 </select>
 </form>
 
+<form>
+How many ingredient:
+<select id="mySelect2">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+
+</select>
+</form>
+
 
 
 <p>Click the button add the ingredient.</p>
@@ -49,7 +52,8 @@ Select your ingredient:
 <button type="button" onclick="remove1()">Delete ingredient Option</button>
 <button type="button" onclick="add2()">Reset Ingredient List </button>
 
-
+<input type="text" id="ingredient"/>
+<button onclick = "getIng()">Add Ingredient</button>
 
 
 <table id="myTable">
@@ -61,20 +65,23 @@ Select your ingredient:
 <script>
 function add1() {
     var x = document.getElementById("mySelect").value;
+    var y = document.getElementById("mySelect2").value;
     var table = document.getElementById("myTable");
     var row = table.insertRow(0);
     var cell = row.insertCell(0);
-    cell.innerHTML = x;
+    var cell2 = row.insertCell(1);
+    cell.innerHTML = y;
+    cell2.innerHTML = x;
+    var z = document.getElementById("mySelect");
+    z.remove(z.selectedIndex);
 }
 function remove1() {
-    var y = document.getElementById("mySelect");
-    y.remove(y.selectedIndex);
+    var z = document.getElementById("mySelect");
+    z.remove(z.selectedIndex);
 }
 function remove2() {
     document.getElementById("myTable").deleteRow(0);
-
 }
-
 function add2() {
     var obj = {
       1 : "Flour",
@@ -94,13 +101,16 @@ function add2() {
       select.options[select.options.length] = new Option(obj[index]);
     }
 
+  function getIng(){
+    var test = document.getElementById('test');
+    document.getElementById("mySelect").appendChild(test);
+  }
 }
-
-
 </script>
 
 
 
  </body>
 </html>
+
 
