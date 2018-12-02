@@ -87,7 +87,7 @@ Select your ingredient:
 
 <p>Click the button add the ingredient.</p>
 <button type="button" onclick="add1()">Add Ingredient to List</button>
-<button type="button" onclick="delete()">Delete top ingredient from List</button>
+<button type="button" onclick="remove2()">Delete top ingredient from List</button>
 <button type="button" onclick="add2()">Reset All</button>
 
 <table id="myTable">
@@ -106,7 +106,7 @@ function add1() {
     z.remove(z.selectedIndex);
 }
 
-function delete() {
+function remove2() {
     document.getElementById("myTable").deleteRow(0);
 }
 function add2() {
