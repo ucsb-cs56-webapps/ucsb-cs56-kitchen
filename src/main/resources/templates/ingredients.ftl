@@ -114,7 +114,7 @@ function add2() {
       1 : "Baking Soda",
       2 : "Basil",
       3 : "Black Beans",
-      3 : "Black Pepper",
+      4 : "Black Pepper",
       5 : "Bread Crumbs",
       6 : "Brown Rice",
       7 : "Brown Sugar",
