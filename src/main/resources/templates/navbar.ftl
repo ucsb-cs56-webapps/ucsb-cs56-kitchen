@@ -11,6 +11,15 @@
       <a class="nav-link" href="/recipes">Recipes</a>
     </li>
 
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Dropdown link
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/ingredients">Ingredients</a>
+        <a class="dropdown-item" href="/recipes">Recipes</a>
+      </div>
     </li>
   </ul>
 </nav>
