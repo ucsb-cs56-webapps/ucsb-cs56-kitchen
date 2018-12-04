@@ -11,7 +11,7 @@
    <#include "head.ftl" />
  </head>
  <body>
-   <#include "navbar.ftl"/>
+   <button onclick = "location.href='recipes'" type = "button"> Go to Recipes </button>
    <h1>This is Ingredients</h1>
 
 <form>
@@ -101,8 +101,8 @@ function add1() {
     var row = table.insertRow(0);
     var cell = row.insertCell(0);
     cell.innerHTML = x;
-    var z = document.getElementById("mySelect");
-    z.remove(z.selectedIndex);
+    //var z = document.getElementById("mySelect");
+    //z.remove(z.selectedIndex);
 }
 function remove2() {
     document.getElementById("myTable").deleteRow(0);
@@ -112,7 +112,7 @@ function add2() {
       1 : "Baking Soda",
       2 : "Basil",
       3 : "Black Beans",
-      3 : "Black Pepper",
+      4 : "Black Pepper",
       5 : "Bread Crumbs",
       6 : "Brown Rice",
       7 : "Brown Sugar",
@@ -186,7 +186,7 @@ function add2() {
 }
 }
 </script>
-<div class="container authenticated" style="display: none">
+<div class="container authenticated">
         Logged in as: <span id="user"></span>
     </div>
     <script>
