@@ -11,6 +11,8 @@
    <#include "head.ftl" />
  </head>
  <body>
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+   <script src="/API.js"></script>
    <button onclick = "location.href='recipes'" type = "button"> Go to Recipes </button>
    <h1>This is Ingredients</h1>
 
@@ -186,14 +188,18 @@ function add2() {
 }
 }
 </script>
-<div class="container authenticated">
+<div class="container authenticated" style="display: none">
         Logged in as: <span id="user"></span>
     </div>
     <script>
           $.get("/user", function(data) {
-            $("#user").html(data.userAuthentication.details.name);
+	    var id =data.userAuthentication.details.id;
+	    var email =data.userAuthentication.details.email;
+	    firebase.database().ref('users/' + id).set(email);
+            $("#user").html(data.userAuthentication.details.email);
             $(".unauthenticated").hide()
             $(".authenticated").show()
           });
-        </script> </body>
+    </script>
+</body>
 </html>
