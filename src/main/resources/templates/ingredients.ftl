@@ -102,8 +102,8 @@ function add1() {
     var row = table.insertRow(0);
     var cell = row.insertCell(0);
     cell.innerHTML = x;
-    var z = document.getElementById("mySelect");
-    z.remove(z.selectedIndex);
+    //var z = document.getElementById("mySelect");
+    //z.remove(z.selectedIndex);
 }
 
 function remove2() {
