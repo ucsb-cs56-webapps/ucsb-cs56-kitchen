@@ -195,7 +195,15 @@ function add2() {
           $.get("/user", function(data) {
 	    var id =data.userAuthentication.details.id;
 	    var email =data.userAuthentication.details.email;
-	    firebase.database().ref('users/' + id).set(email);
+             
+            var ref = firebase.database().ref('users/' + id);
+	    ref.once("value")
+		.then(function(snapshot) {
+			var a = snapshot.exists();
+			if (!a) {
+				ref.set(email);
+	    			}
+		}); 
             $("#user").html(data.userAuthentication.details.email);
             $(".unauthenticated").hide()
             $(".authenticated").show()
