@@ -7,8 +7,21 @@
    <script src="/API.js"></script>
  </head>
  <body>
+   <#include "navbar.ftl"/>
    <h1>Kitchen Ingredients</h1>
    <p>This is a web app to help find you recipes you could create with only the ingredients found in your kitchen!</p>  
-   <a href="/login">Login with Google </a>
+   <div class="container unauthenticated">
+    With Google: <a href="/login">click here</a>
+</div>
+  <div class="container authenticated" style="display: none">
+        Logged in as: <span id="user"></span>
+    </div>
+    <script>
+          $.get("/user", function(data) {
+            $("#user").html(data.userAuthentication.details.name);
+            $(".unauthenticated").hide()
+            $(".authenticated").show()
+          });
+        </script>
 </body>
 </html>
