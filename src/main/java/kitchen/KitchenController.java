@@ -8,25 +8,32 @@ import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
 
-@SpringBootApplication
+
 @EnableOAuth2Sso
-public class Application extends WebSecurityConfigurerAdapter {
-		
+@Controller
+public class KitchenController { 
 
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http.antMatcher("/**")
-			.authorizeRequests()
-		    	.antMatchers("/login**", "/")
-			.permitAll()
-			.anyRequest()
-			.authenticated();
-	}
+    @RequestMapping("/login")
+    public String login() {
+	return "ingredients";
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+	@RequestMapping("/ingredients")
+    public String ingridients() {
+        return "ingredients";
+    }
 
+	@RequestMapping("/recipes")
+	public String recipes() {
+        return "recipes";
+    }
+
+	@RequestMapping("/page3")
+	public String page3() {
+        return "page3";
+    }
+
+	
 }
