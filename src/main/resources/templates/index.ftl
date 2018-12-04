@@ -29,9 +29,19 @@
    <div class="center">
      <h1>Kitchen Ingredients</h1>
      <p>This is a web app to help find you recipes you could create with only the ingredients found in your kitchen!</p>
-     <a href="/login" style="text-transform:none">
+     <a href="ingredients" style="text-transform:none" class="container unauthenticated">
          Login with Google
      </a>
    </div>
+  <div class="container authenticated" style="display: none">
+        Logged in as: <span id="user"></span>
+    </div>
+    <script>
+          $.get("/user", function(data) {
+            $("#user").html(data.userAuthentication.details.name);
+            $(".unauthenticated").hide()
+            $(".authenticated").show()
+          });
+        </script> 
 </body>
 </html>

@@ -5,7 +5,6 @@
     table, td {
       border: 1px solid black;
     }
-
   </style>
 
    <title>Ingredients</title>
@@ -105,7 +104,6 @@ function add1() {
     //var z = document.getElementById("mySelect");
     //z.remove(z.selectedIndex);
 }
-
 function remove2() {
     document.getElementById("myTable").deleteRow(0);
 }
@@ -180,18 +178,22 @@ function add2() {
     for (index in obj){
       select.options[select.options.length] = new Option(obj[index]);
     }
-
     var elmtTable = document.getElementById('myTable');
     var tableRows = elmtTable.getElementsByTagName('tr');
     var rowCount = tableRows.length;
     for (var x=rowCount-1; x>=0; x--) {
       document.getElementById("myTable").deleteRow(x);
 }
-
 }
 </script>
- </body>
+<div class="container authenticated">
+        Logged in as: <span id="user"></span>
+    </div>
+    <script>
+          $.get("/user", function(data) {
+            $("#user").html(data.userAuthentication.details.name);
+            $(".unauthenticated").hide()
+            $(".authenticated").show()
+          });
+        </script> </body>
 </html>
-
-
-
