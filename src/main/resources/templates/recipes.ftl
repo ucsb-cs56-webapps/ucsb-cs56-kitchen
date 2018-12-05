@@ -11,16 +11,19 @@
 
   <script>
 
-   //code here retrieves the data from the database
    $.get("/user", function(data) {
-   var id =data.userAuthentication.details.id;
-   var ref = firebase.database().ref('users/' + id + '/ingredients/');
-   ref.once("value").then(function(snapshot) {
+	    var id =data.userAuthentication.details.id;
+	    var email =data.userAuthentication.details.email;
+            var ref = firebase.database().ref('users/' + id + '/ingredients/');
+	    ref.once("value")
+   .then(function(snapshot) {
    var data = snapshot.val();
-
-   document.getElementById("text").innerHTML = data.toString();
-   }
+   document.getElementById("text").innerHTML = "Im not a text";
+   document.getElementById("text").innerHTML = data.toString() + "changed";
+   
    });
+          
+    });
   
 
    
