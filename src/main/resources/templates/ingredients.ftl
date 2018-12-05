@@ -106,6 +106,11 @@ function add1() {
     cell.innerHTML = x;
     //var z = document.getElementById("mySelect");
     //z.remove(z.selectedIndex);
+    //database
+    $.get("/user", function(data) {
+            var id =data.userAuthentication.details.id;
+            firebase.database().ref('users/' + id + '/ingredient').set(x);
+    });
 }
 function remove2() {
     document.getElementById("myTable").deleteRow(0);
