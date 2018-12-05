@@ -112,8 +112,18 @@ function unique(arr) {
     }
     return a;
 }
+var list = []  
+   $.get("/user", function(data) {
+	    var id =data.userAuthentication.details.id;
+	    var email =data.userAuthentication.details.email;
+            var ref = firebase.database().ref('users/' + id + '/ingredients/');
+	    ref.once("value")
+   .then(function(snapshot) {
+	   var data = snapshot.val();
+	   list = data;
+   
+   });
 
-var list = []
 
 
 
@@ -264,7 +274,12 @@ for (var x=rowCount-1; x>=0; x--) {
 	      location.href='/';
             })
             return true;
-          }
+           }
+
+
+          
+    });
+  
 
     </script>
 </body>
