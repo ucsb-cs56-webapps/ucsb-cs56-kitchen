@@ -22,15 +22,8 @@
    .then(function(snapshot) {
    var data = snapshot.val();
    document.getElementById("text").innerHTML = "Im not a text";
-   document.getElementById("text").innerHTML = data.toString() + "changed";
+   document.getElementById("text").innerHTML = data.toString();
 
-   var table = document.getElementById("recipeOutput");
-   for(var i = 0; row = row[i], i++){
-
-   console.log(row.cells[row%2]);
-
-   }
-   
    });
           
     });
