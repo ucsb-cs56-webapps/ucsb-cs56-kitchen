@@ -19,11 +19,11 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <button class=btn btn-secondary onClick="logout()">
-                <a class="nav-link" onCLick="logout()">
+                <p>
                   <div class="container authenticated" style="display:inline-block">
                     Logout <span id="user"></span>
                   </div>
-                </a>
+                </p>
               </button>
         </ul>
     </div>
