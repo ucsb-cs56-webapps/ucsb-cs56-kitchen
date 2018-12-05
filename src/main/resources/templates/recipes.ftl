@@ -17,18 +17,20 @@
    var ref = firebase.database().ref('users/' + id + '/ingredients/');
    ref.once("value").then(function(snapshot) {
    var data = snapshot.val();
+
    document.getElementById("text").innerHTML = data.toString();
    }
    });
   
 
    
+
 </script>
 
   <style>
 
    table {
-       border: 2px solid black;
+       border: 2px solid steelblue;
      table-layout: auto;
        padding-top: 50px;
        padding-right: 80px;

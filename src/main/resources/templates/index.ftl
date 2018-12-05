@@ -37,12 +37,13 @@
    <div class="center">
      <h1>Kitchen Ingredients</h1>
      <p>This is a web app to help find you recipes you could create with only the ingredients found in your kitchen!</p>
-     <button onClick = 'location.href="ingredients"' class = "btn btn-primary">
+     <button onClick = 'location.href="ingredients"' class = "btn btn-primary container authenticated">
+         Go To Ingredients
+     </button>
+     <button onClick = 'location.href="ingredients"' class = "btn btn-primary container unauthenticated">
          Login with Google
      </button>
-   <div class="container authenticated" style="display: none">
-       Logged in as: <span id="user"></span>
-   </div>
+
    <script>
      $.get("/user", function(data) {
        $("#user").html(data.userAuthentication.details.name);
