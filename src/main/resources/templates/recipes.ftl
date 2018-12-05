@@ -209,12 +209,12 @@
        $.get("/user", function(data) {
             var id =data.userAuthentication.details.id;
    var ref = firebase.database().ref('users/' + id + '/ingredients/');
-   ref.once("value").then(function(snapshot)){
+   ref.on("value").then(function(snapshot)){
    var data = snapshot.val();
    
    var outputText = document.getEleemntById("output");
    outputText.innerHTML = data.toString();
-   
+   }
 </script>
 
 <p id = "output"></p>
