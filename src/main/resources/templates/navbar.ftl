@@ -19,13 +19,13 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class=nav-link>
-                  <div class="container authenticated" style="display: none">
-                      Logged in as: <span id="user"></span>
-                  <div>
+
               </a>
             </li>
             <li class="nav-item">
-                <button onClick="logout()" type="button">Logout </button>
+                <button onClick="logout()" type="button">Logout <div class="container authenticated" style="display: none">
+                    <span id="user"></span>
+                </div></button>
             </li>
         </ul>
     </div>
