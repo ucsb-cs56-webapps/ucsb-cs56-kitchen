@@ -23,6 +23,14 @@ __How to recreate this webapp__
     2. Setup a new web app on Heroku
     
     3. Update pom.xml to reflect your apps name
+    
+    4. Create OAuth API and get keys to add to Heroku config
+    
+    5. Create Firebase Application and intialize into API.JS
+    
+    6. mvn package heruko:deploy
+    
+    7. enjoy
 
 ******************************************************************************************************************************
 Recipe URLs:
