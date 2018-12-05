@@ -281,10 +281,6 @@ for (var x=rowCount-1; x>=0; x--) {
             })
             return true;
            }
-
-
-          
-    });
   
 
     </script>
