@@ -11,6 +11,7 @@
    <#include "head.ftl" />
  </head>
  <body>
+   <script type="text/javascript" src="/webjars/js-cookie/js.cookie.js"></script>
    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
    <script src="/API.js"></script>
    <button onclick = "location.href='recipes'" type = "button"> Go to Recipes </button>
@@ -190,8 +191,26 @@ function add2() {
 </script>
 <div class="container authenticated" style="display: none">
         Logged in as: <span id="user"></span>
+    <div>
+       <button onClick="logout()" type="button">Logout</button>
     </div>
+</div>
     <script>
+
+	   $
+              .ajaxSetup({
+                beforeSend : function(xhr, settings) {
+                  if (settings.type == 'POST' || settings.type == 'PUT'
+                      || settings.type == 'DELETE') {
+                    if (!(/^http:.*/.test(settings.url) || /^https:.*/
+                        .test(settings.url))) {
+                      xhr.setRequestHeader("X-XSRF-TOKEN",
+                          Cookies.get('XSRF-TOKEN'));
+                    }
+                  }
+                }
+              });
+
           $.get("/user", function(data) {
 	    var id =data.userAuthentication.details.id;
 	    var email =data.userAuthentication.details.email;
@@ -208,6 +227,17 @@ function add2() {
             $(".unauthenticated").hide()
             $(".authenticated").show()
           });
+
+           var logout = function() {
+            $.post("/logout", function() {
+              $("#user").html('');
+              $(".unauthenticated").show();
+              $(".authenticated").hide();
+	      location.href='/';
+            })
+            return true;
+          }
+
     </script>
 </body>
 </html>
