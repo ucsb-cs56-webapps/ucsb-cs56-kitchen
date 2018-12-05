@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
  <head>
@@ -104,7 +106,6 @@ Select your ingredient:
 var list;
    $.get("/user", function(data) {
 	    var id =data.userAuthentication.details.id;
-	    var email =data.userAuthentication.details.email;
             var ref = firebase.database().ref('users/' + id + '/ingredients/');
 	    ref.once("value")
    .then(function(snapshot) {
@@ -143,8 +144,8 @@ function add1() {
     //z.remove(z.selectedIndex);
 
 //database
-				       list.push(x);
-				       list = unique(list);
+    list.push(x);
+    list = unique(list);
 
 
    $.get("/user", function(data) {
@@ -153,10 +154,20 @@ function add1() {
 
             firebase.database().ref('users/' + id + '/ingredients/').set(list);
   });
+
 }
 function remove2() {
-    document.getElementById("myTable").deleteRow(0);
-}
+				       document.getElementById("myTable").deleteRow(0);
+				       list.pop();
+				       
+   $.get("/user", function(data) {
+            var id =data.userAuthentication.details.id;
+	    var ref = firebase.database().ref('users/' + id + '/ingredients/');
+
+            firebase.database().ref('users/' + id + '/ingredients/').set(list);
+				       });
+				       }
+				       
 function add2() {
     var obj = {
       1 : "Baking Soda",
@@ -232,10 +243,10 @@ function add2() {
     var elmtTable = document.getElementById('myTable');
     var tableRows = elmtTable.getElementsByTagName('tr');
     var rowCount = tableRows.length;
-for (var x=rowCount-1; x>=0; x--) {
+    for (var x=rowCount-1; x>=0; x--) {
     document.getElementById("myTable").deleteRow(x);
     }
-    }
+ }
 
 </script>
 
@@ -279,9 +290,9 @@ for (var x=rowCount-1; x>=0; x--) {
 	      location.href='/';
             })
             return true;
-           }
-
+           };
   
+
     </script>
 </body>
 </html>
