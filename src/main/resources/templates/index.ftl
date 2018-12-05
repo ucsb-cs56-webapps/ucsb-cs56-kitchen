@@ -12,6 +12,9 @@
  <style>
    body {
        background-image: url( "https://media.fshoq.com/images/189/tomatoes-and-basil-on-the-table-in-kitchen-189-small.jpg");
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center center;
        text-align: center;
        display: block;
        margin-left: auto;
@@ -37,11 +40,8 @@
    <div class="center">
      <h1>Kitchen Ingredients</h1>
      <p>This is a web app to help find you recipes you could create with only the ingredients found in your kitchen!</p>
-     <button onClick = 'location.href="ingredients"' class = "btn btn-primary container authenticated">
-         Go To Ingredients
-     </button>
-     <button onClick = 'location.href="ingredients"' class = "btn btn-primary container unauthenticated">
-         Login with Google
+     <button onClick = 'location.href="ingredients"' class = "btn btn-primary">
+         Login With Google
      </button>
 
    <script>
