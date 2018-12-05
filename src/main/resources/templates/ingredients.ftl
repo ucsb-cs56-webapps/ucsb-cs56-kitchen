@@ -11,7 +11,7 @@
    <#include "head.ftl" />
  </head>
  <body>
- 
+
    <#include "navbar.ftl" />
 
    <script type="text/javascript" src="/webjars/js-cookie/js.cookie.js"></script>
@@ -114,9 +114,9 @@ function unique(arr) {
 }
 
 var list = []
-			       
-				       
-  
+
+
+
   function add1() {
     var x = document.getElementById("mySelect").value;
     var table = document.getElementById("myTable");
@@ -129,15 +129,15 @@ var list = []
 //database
 				       list.push(x);
 				       list = unique(list);
-    
-   
+
+
    $.get("/user", function(data) {
             var id =data.userAuthentication.details.id;
 	    var ref = firebase.database().ref('users/' + id + '/ingredients/');
-	    
+
             firebase.database().ref('users/' + id + '/ingredients/').set(list);
   });
-				       
+
 }
 function remove2() {
     document.getElementById("myTable").deleteRow(0);
@@ -221,16 +221,11 @@ for (var x=rowCount-1; x>=0; x--) {
     document.getElementById("myTable").deleteRow(x);
     }
     }
-    
+
 </script>
-<div class="container authenticated" style="display: none">
-        Logged in as: <span id="user"></span>
-    <div>
-       <button onClick="logout()" type="button">Logout</button>
-    </div>
-</div>
+
     <script>
-      
+
 	   $.ajaxSetup({
                 beforeSend : function(xhr, settings) {
                   if (settings.type == 'POST' || settings.type == 'PUT'
