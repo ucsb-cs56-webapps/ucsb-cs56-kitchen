@@ -4,38 +4,38 @@
 	"url":"https://www.allrecipes.com/recipe/16409/spinach-and-strawberry-salad/?internalSource=hub%20recipe&referringContentType=Search"
     },
     "Chocolate Chip Cookies":{
-	"ingredients":["all-purpose flour","baking soda","brown sugar","egg","egg yolk","salt","semisweet chocolate chips","unsalted butter","vanilla extract","white sugar"],
+	"ingredients":["flour","baking soda","brown sugar","egg","egg yolk","salt","chocolate chips","butter","vanilla extract","white sugar"],
 	"url":"https://www.allrecipes.com/recipe/25037/best-big-fat-chewy-chocolate-chip-cookie/?internalSource=hub%20recipe&referringId=79&referringContentType=Recipe%20Hub"
     },
     "Double Layer Pumpkin Cheesecake":{
-	"ingredients":["cream cheese","egg","frozen whipped topping","graham cracker crust","ground cinnamon","ground cloves","ground nutmeg","pumpkin puree","vanilla extract","white sugar"],
+	"ingredients":["cream cheese","egg","whipped cream","graham cracker","cinnamon","cloves","nutmeg","pumpkin puree","vanilla extract","white sugar"],
 	"url":"https://www.allrecipes.com/recipe/13477/double-layer-pumpkin-cheesecake/?internalSource=recipe%20hub&referringId=79&referringContentType=Recipe%20Hub&clickId=cardslot%2022"
     },
     "Citrus Baked Fish":{
-	"ingredients":["cooking spray","dried parsley","ground black pepper","ground paprika","lemon juice","lime juice","melted butter","orange juice","salmon fillets","salt"],
+	"ingredients":["cooking spray","parsley","black pepper","paprika","lemon juice","lime juice","butter","orange juice","salmon","salt"],
 	"url":"https://www.allrecipes.com/recipe/255950/citrus-baked-fish/?internalSource=staff%20pick&referringId=416&referringContentType=Recipe%20Hub"
     },
     "Black Bean and Corn Quesadillas":{
-	"ingredients":["black bean","brown sugar","butter","flour tortilla","Monterey Jack cheese","olive oil","onion","red pepper flake","salsa","whole kernel corn"],
+	"ingredients":["black bean","brown sugar","butter","tortilla","cheese (Jack)","olive oil","onion","red pepper flakes","salsa","corn"],
 	"url":"https://www.allrecipes.com/recipe/104850/black-bean-and-corn-quesadillas/?internalSource=hub%20recipe&referringContentType=Search"
     },
     "Korean Ground Beef Bowl":{
-	"ingredients":["brown rice","brown sugar","crushed red pepper","garlic","ginger","green onion","lean ground beef","soy sauce","toasted sesame oil","toasted sesame seeds"],
+	"ingredients":["brown rice","brown sugar","red pepper flakes","garlic","ginger","onion (green)","ground beef","soy sauce","sesame oil","sesame seeds"],
 	"url":"https://www.allrecipes.com/recipe/268091/easy-korean-ground-beef-bowl/?internalSource=hub%20recipe&referringContentType=Search"
     },
     "Meatballs":{
-	"ingredients":["bread crumbs","dried oregano","extra lean ground beef","garlic salt","hot pepper sauce","Italian seasoning","onion","Parmesan cheese","red pepper flake","salt","skim milk","Worcestershire sauce"],
+	"ingredients":["bread crumbs","oregano","ground beef","garlic salt","hot sauce","Italian seasoning","onion","cheese (Parmesan)","red pepper flakes","salt","skim milk","Worcestershire sauce"],
 	"url":"https://www.allrecipes.com/recipe/213742/meatball-nirvana/?internalSource=hub%20recipe&referringContentType=Search"
     },
     "Hamburgers":{
 	"ingredients":["bread crumbs","cayenne pepper","egg","evaporated milk","garlic","ground beef","Worcestershire sauce"],
 	"url":"https://www.allrecipes.com/recipe/49404/juiciest-hamburgers-ever/?internalSource=hub%20recipe&referringContentType=Search"},
     "Sausage Pasta":{
-	"ingredients":["chicken broth","dried basil","garlic","olive oil","onion","Parmesan cheese","pasta","spicy Italian sausage","spinach","tomato"],
+	"ingredients":["chicken broth","basil","garlic","olive oil","onion","cheese (Parmesan)","pasta","Italian sausage","spinach","tomato"],
 	"url":"https://www.allrecipes.com/recipe/19291/sausage-pasta/?internalSource=hub%20recipe&referringContentType=Search"
     },
     "Scrambled Eggs":{
-	"ingredients":["butter","Cheddar cheese","egg","heavy whipping cream"],
+	"ingredients":["butter","cheese (Cheddar)","egg","heavy whipping cream"],
 	"url":"https://www.allrecipes.com/recipe/256007/best-scrambled-eggs/?internalSource=hub%20recipe&referringContentType=Search"
     }
 }
