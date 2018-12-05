@@ -28,7 +28,3 @@ hs_err_pid*
 # API data
 *.properties
 /src/main/resources/static/API.js
-
-#Spring-boot
-localhost.json
-heroku.json
