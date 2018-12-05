@@ -112,7 +112,7 @@ function add1() {
     
     $.get("/user", function(data) {
             var id =data.userAuthentication.details.id;
-	    var ref = firebase.database().ref('users/' + id + '/ingredients' + x);
+	    var ref = firebase.database().ref('users/' + id + '/ingredients/' + x);
 	    ref.once("value")
 		.then(function(snapshot) {
 			var a = snapshot.exists();
