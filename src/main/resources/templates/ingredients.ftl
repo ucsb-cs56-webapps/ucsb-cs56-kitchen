@@ -104,147 +104,143 @@ Select your ingredient:
 var list;
    $.get("/user", function(data) {
 	    var id =data.userAuthentication.details.id;
-	    var email =data.userAuthentication.details.email;
             var ref = firebase.database().ref('users/' + id + '/ingredients/');
 	    ref.once("value")
    .then(function(snapshot) {
    list = snapshot.val();
+   if(list != null){
    for(var i = 0; i < list.length; i++){
 		   var table = document.getElementById("myTable");
 		   var row = table.insertRow(0);
 		   var cell = row.insertCell(0);
 		   cell.innerHTML = list[i];
 }
+}else{
+	list = [];
+}
    });        
  });	
-
-
 function unique(arr) {
     var u = {}, a = [];
-for(var i = 0, l = arr.length; i < l; ++i){
-if(!u.hasOwnProperty(arr[i])) {
-    a.push(arr[i]);
-    u[arr[i]] = 1;
-}
-}
-return a;
+    for(var i = 0, l = arr.length; i < l; ++i){
+        if(!u.hasOwnProperty(arr[i])) {
+            a.push(arr[i]);
+            u[arr[i]] = 1;
+        }
+    }
+    return a;
 }   
-
-
-
+  
 function add1() {
-		       
-var x = document.getElementById("mySelect").value;
-var table = document.getElementById("myTable");
-var row = table.insertRow(0);
-var cell = row.insertCell(0);
-cell.innerHTML = x;
-//var z = document.getElementById("mySelect");
-//z.remove(z.selectedIndex);
-
+			       
+    var x = document.getElementById("mySelect").value;
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(0);
+    var cell = row.insertCell(0);
+    cell.innerHTML = x;
+    //var z = document.getElementById("mySelect");
+    //z.remove(z.selectedIndex);
 //database
-			       list.push(x);
-			       list = unique(list);
-
-
-$.get("/user", function(data) {
-    var id =data.userAuthentication.details.id;
-    var ref = firebase.database().ref('users/'+id+'/ingredients/');
-
-    firebase.database().ref('users/' + id +'/ingredients/').set(list);
-});
+    list.push(x);
+    list = unique(list);
+   $.get("/user", function(data) {
+            var id =data.userAuthentication.details.id;
+	    var ref = firebase.database().ref('users/' + id + '/ingredients/');
+            firebase.database().ref('users/' + id + '/ingredients/').set(list);
+  });
 }
-
-</script>
-<script>
-
 function remove2() {
-document.getElementById("myTable").deleteRow(0);
-}
-
+				       document.getElementById("myTable").deleteRow(0);
+				       list.pop();
+				       
+   $.get("/user", function(data) {
+            var id =data.userAuthentication.details.id;
+	    var ref = firebase.database().ref('users/' + id + '/ingredients/');
+            firebase.database().ref('users/' + id + '/ingredients/').set(list);
+				       });
+				       }
+				       
 function add2() {
-var obj = {
-1 : "Baking Soda",
-2 : "Basil",
-3 : "Black Beans",
-4 : "Black Pepper",
-5 : "Bread Crumbs",
-6 : "Brown Rice",
-7 : "Brown Sugar",
-8 : "Butter",
-9 : "Cayenne Pepper",
-10 : "Cheese (Cheddar)",
-11 : "Cheese (Jack)",
-12 : "Cheese (Parmesan)",
-13 : "Chicken Broth",
-14 : "Chocolate Chips",
-15 : "Cinnamon",
-16 : "Cloves",
-17 : "Cooking Spray",
-18 : "Corn",
-19 : "Cream Cheese",
-20 : "Diced Tomato",
-21 : "Egg",
-22 : "Egg Yolk",
-23 : "Evaporated Milk",
-24 : "Flour",
-25 : "Garlic",
-26 : "Garlic Salt",
-27 : "Ginger",
-28 : "Graham Cracker",
-29 : "Ground Beef",
-30 : "Ham",
-31 : "Heavy Whipping Cream",
-32 : "Hot Sauce",
-33 : "Italian Sausage",
-34 : "Italian Seasoning",
-35 : "Lemon juice",
-36 : "Lime juice",
-37 : "Milk",
-38 : "Nutmeg",
-39 : "Olive Oil",
-40 : "Onion",
-41 : "Onion (Green)",
-42 : "Orange Juice",
-43 : "Oregano",
-44 : "Paprika",
-45 : "Parsley",
-46 : "Pasta",
-47 : "Poppy Seeds",
-48 : "Pumpkin Puree",
-49 : "Red Pepper Flakes",
-50 : "Salsa",
-51 : "Salt",
-52 : "Sesame Oil",
-53 : "Sesame Seeds",
-54 : "Soy Sauce",
-55 : "Spinach",
-56 : "Strawberry",
-57 : "Tortillas",
-58 : "Vanilla Extract",
-59 : "Vegetable Oil",
-60 : "Whipped Cream",
-61 : "White Sugar",
-62 : "White Wine Vinegar",
-63 : "Worcestershire Sauce",
-};
-
-var select= document.getElementById("mySelect");
-document.getElementById("mySelect").options.length = 0;
-for (index in obj){
-select.options[select.options.length] = new Option(obj[index]);
-}
-var elmtTable = document.getElementById('myTable');
-var tableRows = elmtTable.getElementsByTagName('tr');
-var rowCount = tableRows.length;
-for (var x=rowCount-1; x>=0; x--) {
+    var obj = {
+      1 : "Baking Soda",
+      2 : "Basil",
+      3 : "Black Beans",
+      4 : "Black Pepper",
+      5 : "Bread Crumbs",
+      6 : "Brown Rice",
+      7 : "Brown Sugar",
+      8 : "Butter",
+      9 : "Cayenne Pepper",
+      10 : "Cheese (Cheddar)",
+      11 : "Cheese (Jack)",
+      12 : "Cheese (Parmesan)",
+      13 : "Chicken Broth",
+      14 : "Chocolate Chips",
+      15 : "Cinnamon",
+      16 : "Cloves",
+      17 : "Cooking Spray",
+      18 : "Corn",
+      19 : "Cream Cheese",
+      20 : "Diced Tomato",
+      21 : "Egg",
+      22 : "Egg Yolk",
+      23 : "Evaporated Milk",
+      24 : "Flour",
+      25 : "Garlic",
+      26 : "Garlic Salt",
+      27 : "Ginger",
+      28 : "Graham Cracker",
+      29 : "Ground Beef",
+      30 : "Ham",
+      31 : "Heavy Whipping Cream",
+      32 : "Hot Sauce",
+      33 : "Italian Sausage",
+      34 : "Italian Seasoning",
+      35 : "Lemon juice",
+      36 : "Lime juice",
+      37 : "Milk",
+      38 : "Nutmeg",
+      39 : "Olive Oil",
+      40 : "Onion",
+      41 : "Onion (Green)",
+      42 : "Orange Juice",
+      43 : "Oregano",
+      44 : "Paprika",
+      45 : "Parsley",
+      46 : "Pasta",
+      47 : "Poppy Seeds",
+      48 : "Pumpkin Puree",
+      49 : "Red Pepper Flakes",
+      50 : "Salsa",
+      51 : "Salt",
+      52 : "Sesame Oil",
+      53 : "Sesame Seeds",
+      54 : "Soy Sauce",
+      55 : "Spinach",
+      56 : "Strawberry",
+      57 : "Tortillas",
+      58 : "Vanilla Extract",
+      59 : "Vegetable Oil",
+      60 : "Whipped Cream",
+      61 : "White Sugar",
+      62 : "White Wine Vinegar",
+      63 : "Worcestershire Sauce",
+    };
+    var select= document.getElementById("mySelect");
+    document.getElementById("mySelect").options.length = 0;
+    for (index in obj){
+      select.options[select.options.length] = new Option(obj[index]);
+    }
+    var elmtTable = document.getElementById('myTable');
+    var tableRows = elmtTable.getElementsByTagName('tr');
+    var rowCount = tableRows.length;
+    for (var x=rowCount-1; x>=0; x--) {
     document.getElementById("myTable").deleteRow(x);
     }
-    }
+ }
 </script>
 
     <script>
-
 	   $.ajaxSetup({
                 beforeSend : function(xhr, settings) {
                   if (settings.type == 'POST' || settings.type == 'PUT'
@@ -273,7 +269,6 @@ for (var x=rowCount-1; x>=0; x--) {
             $(".unauthenticated").hide()
             $(".authenticated").show()
           });
-
            var logout = function() {
             $.post("/logout", function() {
               $("#user").html('');
@@ -282,7 +277,8 @@ for (var x=rowCount-1; x>=0; x--) {
 	      location.href='/';
             })
             return true;
-           }  
+           };
+  
     </script>
 </body>
 </html>
