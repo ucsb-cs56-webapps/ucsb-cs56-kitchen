@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>Page 3</title>
+   <title>Error :(</title>
    <#include "head.ftl" />
  </head>
  <body>
-   <#include "navbar.ftl" />
-   <h1>This is Page 3</h1>
-  <p>Same stuff, different page</p>
+   <h1>You encountered an error somewhere! :( </h1>
+  <a href = '/'>Click here to return home</a>
  </body>
 </html>

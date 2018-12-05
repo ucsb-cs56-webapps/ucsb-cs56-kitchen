@@ -106,6 +106,22 @@ function add1() {
     cell.innerHTML = x;
     //var z = document.getElementById("mySelect");
     //z.remove(z.selectedIndex);
+    //database
+    
+    
+    
+    $.get("/user", function(data) {
+            var id =data.userAuthentication.details.id;
+	    var ref = firebase.database().ref('users/' + id + '/ingredients/' + x);
+	    ref.once("value")
+		.then(function(snapshot) {
+			var a = snapshot.exists();
+			if (!a) {
+				ref.set(" ");
+	    			}
+		}); 
+            //firebase.database().ref('users/' + id + '/ingredient' + x).set(" ");
+    });
 }
 function remove2() {
     document.getElementById("myTable").deleteRow(0);
