@@ -112,12 +112,10 @@ var list;
    });        
  });	
 for(var i = 0; i < list.length; i++){
-		   if(list[i]) {
 		   var table = document.getElementById("myTable");
 		   var row = table.insertRow(0);
 		   var cell = row.insertCell(0);
 		   cell.innertHTML = list[i];
-		   }
 }
 
 function unique(arr) {
