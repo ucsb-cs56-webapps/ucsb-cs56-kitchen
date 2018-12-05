@@ -11,6 +11,7 @@
    <#include "head.ftl" />
  </head>
  <body>
+   <#include "navbar.ftl"/>
    <script type="text/javascript" src="/webjars/js-cookie/js.cookie.js"></script>
    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
    <script src="/API.js"></script>
@@ -30,7 +31,7 @@ Select your ingredient:
   <option value="butter">Butter</option>
   <option value="cayenne pepper">Cayenne Pepper</option>
   <option value="cheese (cheddar)">Cheese (Cheddar)</option>
-  <option value="cheese (jack)">Cheese (Jack)</option> 
+  <option value="cheese (jack)">Cheese (Jack)</option>
   <option value="cheese (parmesan)">Cheese (Parmesan)</option>
   <option value="chicken broth">Chicken Broth</option>
   <option value="chocolate chips">Chocolate Chips</option>
@@ -41,7 +42,7 @@ Select your ingredient:
   <option value="cream cheese">Cream Cheese</option>
   <option value="diced tomato">Diced Tomato</option>
   <option value="egg">Egg</option>
-  <option value="egg yolk">Egg Yolk</option> 
+  <option value="egg yolk">Egg Yolk</option>
   <option value="evaporated milk">Evaporated Milk</option>
   <option value="flour">Flour</option>
   <option value="garlic">Garlic</option>
@@ -51,7 +52,7 @@ Select your ingredient:
   <option value="ground beef">Ground Beef</option>
   <option value="ham">Ham</option>
   <option value="heavy whipping cream">Heavy Whipping Cream</option>
-  <option value="hot sauce">Hot Sauce</option>  
+  <option value="hot sauce">Hot Sauce</option>
   <option value="italian sausage">Italian Sausage</option>
   <option value="italian seasoning">Italian Seasoning</option>
   <option value="lemon juice">Lemon Juice</option>
@@ -61,9 +62,9 @@ Select your ingredient:
   <option value="olive oil">Olive Oil</option>
   <option value="onion">Onion</option>
   <option value="onion (green)">Onion (Green)</option>
-  <option value="orange juice">Orange Juice</option>  
+  <option value="orange juice">Orange Juice</option>
   <option value="oregano">Oregano</option>
-  <option value="paprika">Paprika</option> 
+  <option value="paprika">Paprika</option>
   <option value="parsley">Parsley</option>
   <option value="pasta">Pasta</option>
   <option value="poppy seeds">Poppy Seeds</option>
@@ -71,7 +72,7 @@ Select your ingredient:
   <option value="red pepper flakes">Red Pepper Flakes</option>
   <option value="salsa">Salsa</option>
   <option value="salt">Salt</option>
-  <option value="sesame oil">Sesame Oil</option> 
+  <option value="sesame oil">Sesame Oil</option>
   <option value="sesame seeds">Sesame Seeds</option>
   <option value="soy sauce">Soy Sauce</option>
   <option value="spinach">Spinach</option>
@@ -83,7 +84,7 @@ Select your ingredient:
   <option value="white sugar">White Sugar</option>
   <option value="white wine vinegar">White Wine Vinegar</option>
   <option value="worcestershire sauce">Worcestershire Sauce</option>
-  
+
 </select>
 </form>
 
@@ -124,31 +125,18 @@ var list = []
     cell.innerHTML = x;
     //var z = document.getElementById("mySelect");
     //z.remove(z.selectedIndex);
+
 //database
 				       list.push(x);
 				       list = unique(list);
     
-    /*
-    $.get("/user", function(data) {
-            var id =data.userAuthentication.details.id;
-	    var ref = firebase.database().ref('users/' + id + '/ingredients/' + x);
-	    ref.once("value")
-		.then(function(snapshot) {
-			var a = snapshot.exists();
-			if (!a) {
-				ref.set(" ");
-	    			}
-		}); 
-            //firebase.database().ref('users/' + id + '/ingredient' + x).set(" ");
-				       });
-				       */
-
+   
    $.get("/user", function(data) {
             var id =data.userAuthentication.details.id;
 	    var ref = firebase.database().ref('users/' + id + '/ingredients/');
 	    
             firebase.database().ref('users/' + id + '/ingredient/').set(list);
-				       });
+  });
 				       
 }
 function remove2() {
@@ -187,7 +175,7 @@ function add2() {
       29 : "Ground Beef",
       30 : "Ham",
       31 : "Heavy Whipping Cream",
-      32 : "Hot Sauce",  
+      32 : "Hot Sauce",
       33 : "Italian Sausage",
       34 : "Italian Seasoning",
       35 : "Lemon juice",
@@ -197,7 +185,7 @@ function add2() {
       39 : "Olive Oil",
       40 : "Onion",
       41 : "Onion (Green)",
-      42 : "Orange Juice",  
+      42 : "Orange Juice",
       43 : "Oregano",
       44 : "Paprika",
       45 : "Parsley",
@@ -207,7 +195,7 @@ function add2() {
       49 : "Red Pepper Flakes",
       50 : "Salsa",
       51 : "Salt",
-      52 : "Sesame Oil",  
+      52 : "Sesame Oil",
       53 : "Sesame Seeds",
       54 : "Soy Sauce",
       55 : "Spinach",
@@ -218,8 +206,9 @@ function add2() {
       60 : "Whipped Cream",
       61 : "White Sugar",
       62 : "White Wine Vinegar",
-      63 : "Worcestershire Sauce",     
-};
+      63 : "Worcestershire Sauce",
+    };
+
     var select= document.getElementById("mySelect");
     document.getElementById("mySelect").options.length = 0;
     for (index in obj){
@@ -258,7 +247,7 @@ for (var x=rowCount-1; x>=0; x--) {
           $.get("/user", function(data) {
 	    var id =data.userAuthentication.details.id;
 	    var email =data.userAuthentication.details.email;
-             
+
             var ref = firebase.database().ref('users/' + id);
 	    ref.once("value")
 		.then(function(snapshot) {
@@ -266,7 +255,7 @@ for (var x=rowCount-1; x>=0; x--) {
 			if (!a) {
 				ref.set(email);
 	    			}
-		}); 
+		});
             $("#user").html(data.userAuthentication.details.email);
             $(".unauthenticated").hide()
             $(".authenticated").show()
