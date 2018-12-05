@@ -11,8 +11,7 @@
   <script>
    
    //code here retrieves the data from the database
-       $.get("/user", function(data) {
-            var id =data.userAuthentication.details.id;
+    $.get("/user", function(data) { var id =data.userAuthentication.details.id;
    var ref = firebase.database().ref('users/' + id + '/ingredients/');
    /*
    ref.on("value").then(function(snapshot)){
@@ -26,7 +25,8 @@
   console.log(snapshot.val());
 }, function (errorObject) {
   console.log("The read failed: " + errorObject.code);
-});
+}
+   });
 </script>
   
   <style>
@@ -224,7 +224,7 @@
      </tr>
    </table>
 
- 
+<p id ="text">I am a text</p> 
 
  </body>
 </html>
