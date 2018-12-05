@@ -11,7 +11,7 @@
  </head>
  <style>
    body {
-       background-image: url("/src/main/resources/static/bg.jpg"); 
+       background-image: url( "https://images.pexels.com/photos/326278/pexels-photo-326278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); 
        text-align: center;
        display: block;
        margin-left: auto;
