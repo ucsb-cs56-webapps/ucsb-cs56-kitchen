@@ -109,7 +109,7 @@ function add1() {
     //database
     $.get("/user", function(data) {
             var id =data.userAuthentication.details.id;
-            firebase.database().ref('users/' + id + '/ingredient').set(x);
+            firebase.database().ref('users/' + id + '/ingredient' + x).set(" ");
     });
 }
 function remove2() {
