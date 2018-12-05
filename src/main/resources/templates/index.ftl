@@ -41,7 +41,12 @@
      <h1>Kitchen Ingredients</h1>
      <p>This is a web app to help find you recipes you could create with only the ingredients found in your kitchen!</p>
      <button onClick = 'location.href="ingredients"' class = "btn btn-primary">
-         Login With Google
+         <div class="container authenticated" style="display: none">
+                      Go To Ingredients
+         </div>
+	 <div class="container unauthenticated" style="display: none">
+                      Login With Google
+         </div>
      </button>
 
    <script>
