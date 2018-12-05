@@ -153,7 +153,6 @@ function add1() {
 
             firebase.database().ref('users/' + id + '/ingredients/').set(list);
   });
-
 }
 function remove2() {
     document.getElementById("myTable").deleteRow(0);
@@ -282,11 +281,7 @@ for (var x=rowCount-1; x>=0; x--) {
             return true;
            }
 
-
-          
-    });
   
-
     </script>
 </body>
 </html>
