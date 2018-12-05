@@ -135,7 +135,7 @@ var list = []
             var id =data.userAuthentication.details.id;
 	    var ref = firebase.database().ref('users/' + id + '/ingredients/');
 	    
-            firebase.database().ref('users/' + id + '/ingredient/').set(list);
+            firebase.database().ref('users/' + id + '/ingredients/').set(list);
   });
 				       
 }
