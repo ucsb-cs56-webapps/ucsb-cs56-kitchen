@@ -18,7 +18,7 @@
    ref.on("value").then(function(snapshot)){
    var data = snapshot.val();
 
-   var outputText = document.getEleemntById("output");
+   var outputText = document.getElementById("output");
    outputText.innerHTML = data.toString();
    }
    
@@ -28,7 +28,7 @@
   <style>
 
    table {
-       border: 2px solid black;
+       border: 2px solid steelblue;
      table-layout: auto;
        padding-top: 50px;
        padding-right: 80px;
