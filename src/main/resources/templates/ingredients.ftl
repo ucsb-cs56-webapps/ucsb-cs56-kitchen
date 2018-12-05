@@ -96,8 +96,26 @@ Select your ingredient:
   </tr>
 </table>
 
+
+
 <script>
-function add1() {
+
+function unique(arr) {
+    var u = {}, a = [];
+    for(var i = 0, l = arr.length; i < l; ++i){
+        if(!u.hasOwnProperty(arr[i])) {
+            a.push(arr[i]);
+            u[arr[i]] = 1;
+        }
+    }
+    return a;
+}
+
+var list = []
+			       
+				       
+  
+  function add1() {
     var x = document.getElementById("mySelect").value;
     var table = document.getElementById("myTable");
     var row = table.insertRow(0);
@@ -105,22 +123,19 @@ function add1() {
     cell.innerHTML = x;
     //var z = document.getElementById("mySelect");
     //z.remove(z.selectedIndex);
-    //database
 
-
-
-    $.get("/user", function(data) {
+//database
+				       list.push(x);
+				       list = unique(list);
+    
+   
+   $.get("/user", function(data) {
             var id =data.userAuthentication.details.id;
-	    var ref = firebase.database().ref('users/' + id + '/ingredients/' + x);
-	    ref.once("value")
-		.then(function(snapshot) {
-			var a = snapshot.exists();
-			if (!a) {
-				ref.set(" ");
-	    			}
-		});
-            //firebase.database().ref('users/' + id + '/ingredient' + x).set(" ");
-    });
+	    var ref = firebase.database().ref('users/' + id + '/ingredients/');
+	    
+            firebase.database().ref('users/' + id + '/ingredient/').set(list);
+  });
+				       
 }
 function remove2() {
     document.getElementById("myTable").deleteRow(0);
@@ -191,6 +206,7 @@ function add2() {
       62 : "White Wine Vinegar",
       63 : "Worcestershire Sauce",
     };
+
     var select= document.getElementById("mySelect");
     document.getElementById("mySelect").options.length = 0;
     for (index in obj){
@@ -199,10 +215,11 @@ function add2() {
     var elmtTable = document.getElementById('myTable');
     var tableRows = elmtTable.getElementsByTagName('tr');
     var rowCount = tableRows.length;
-    for (var x=rowCount-1; x>=0; x--) {
-      document.getElementById("myTable").deleteRow(x);
-}
-}
+for (var x=rowCount-1; x>=0; x--) {
+    document.getElementById("myTable").deleteRow(x);
+    }
+    }
+    
 </script>
 <div class="container authenticated" style="display: none">
         Logged in as: <span id="user"></span>
@@ -211,9 +228,8 @@ function add2() {
     </div>
 </div>
     <script>
-
-	   $
-              .ajaxSetup({
+      
+	   $.ajaxSetup({
                 beforeSend : function(xhr, settings) {
                   if (settings.type == 'POST' || settings.type == 'PUT'
                       || settings.type == 'DELETE') {
