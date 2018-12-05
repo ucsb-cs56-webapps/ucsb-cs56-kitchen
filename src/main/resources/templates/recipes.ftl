@@ -6,6 +6,9 @@
  </head>
  <body>
    <#include "navbar.ftl">
+      <script type="text/javascript" src="/webjars/js-cookie/js.cookie.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+<script src="/API.js"></script>
    <h1>Recipes</h1>
   <p>These are all the possible recipes currently in our database</p>
 

@@ -18,12 +18,7 @@
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class=nav-link>
-
-              </a>
-            </li>
-            <li class="nav-item">
-                <button onClick="logout()" type="button">Logout <div class="container authenticated" style="display: none">
+                <button onClick="logout()" type="button">Logout <div class="container authenticated" style="display:inline-block">
                     <span id="user"></span>
                 </div></button>
             </li>
