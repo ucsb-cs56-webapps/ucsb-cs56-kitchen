@@ -5,7 +5,26 @@ As a user, I can get a recipe and its details that I can make using the ingredie
 
 https://cs56-f18-kitchen-ingredients.herokuapp.com
 
-*****************************************************************************************************************************
+******************************************************************************************************************************
+
+__Contributors__
+      
+    Max Kiss
+    
+    Zack Higgins
+    
+    
+
+******************************************************************************************************************************
+__How to recreate this webapp__
+    
+    1. Clone this Repo
+    
+    2. Setup a new web app on Heroku
+    
+    3. Update pom.xml to reflect your apps name
+
+******************************************************************************************************************************
 Recipe URLs:
 1. Spinach And Strawberry Salad
 https://www.allrecipes.com/recipe/16409/spinach-and-strawberry-salad/?internalSource=hub%20recipe&referringContentType=Search

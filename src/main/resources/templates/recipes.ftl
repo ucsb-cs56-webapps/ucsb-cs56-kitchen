@@ -10,6 +10,7 @@
    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
 <script src="/API.js"></script>
    <h1>Recipes</h1>
+   <p id ="text">You have: </p>
   <p>These are all the possible recipes currently in our database</p>
 
   <script>
@@ -21,8 +22,8 @@
 	    ref.once("value")
    .then(function(snapshot) {
    var data = snapshot.val();
-   document.getElementById("text").innerHTML = "Im not a text";
-   document.getElementById("text").innerHTML = data.toString();
+   //document.getElementById("text").innerHTML = "Im not a text";
+   document.getElementById("text").innerHTML = "You have: " + data.toString();
 
    });
           
@@ -228,7 +229,7 @@
      </tr>
    </table>
 
-<p id ="text">I am a text</p>
+
 
  </body>
 </html>
