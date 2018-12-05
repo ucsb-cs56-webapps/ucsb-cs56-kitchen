@@ -58,7 +58,7 @@
 
    </style>
 
- <table id="recipeOutput" border = "1" class="center">
+ <table id="recipeOutput" border = "1" class="center" style="background-color:rgba(50, 81, 255, 0.05);">
      <tr>
        <th>Recipes</th>
        <th></th>
