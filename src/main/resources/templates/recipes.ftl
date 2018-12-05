@@ -18,10 +18,17 @@
       padding-bottom: 50px;
       padding-left: 80px;
   }
+  
+  table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+  
+  
   </style>
 
  
- <table id="recipeOutput" border = "1">
+ <table id="recipeOutput" border = "1" class="center">
      <tr>
        <th>Recipes</th>
      </tr>
