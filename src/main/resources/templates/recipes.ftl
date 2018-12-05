@@ -77,6 +77,29 @@
        <td height="250"><img style="display:block;" width="100%" height="100%" src="https://images.media-allrecipes.com/userphotos/560x315/4103972.jpg" /><center><a href = "https://www.allrecipes.com/recipe/256007/best-scrambled-eggs/?internalSource=hub%20recipe&referringContentType=Search">Scrambled Eggs</a></td>
      </tr>
    </table>
-  
+
+<script>
+   //code here retrieves the data from the database
+       $.get("/user", function(data) {
+            var id =data.userAuthentication.details.id;
+   var ref = firebase.database().ref('users/' + id + '/ingredients/');
+   ref.once("value").then(function(snapshot)){
+   var key = snapshot.key;
+   var childKey = snapshot.child("
+   }
+
+
+   ref.once("value")
+		.then(function(snapshot) {
+			var a = snapshot.exists();
+			if (!a) {
+				ref.set(" ");
+	    			}
+		}); 
+            //firebase.database().ref('users/' + id + '/ingredient' + x).set(" ");
+    });
+   
+</script>
+
  </body>
 </html>
