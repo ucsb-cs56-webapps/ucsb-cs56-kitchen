@@ -73,12 +73,9 @@
    <div class="center">
      <h1>Kitchen Ingredients</h1>
      <p>This is a web app to help find you recipes you could create with only the ingredients found in your kitchen!</p>
-     <a href="ingredients" style="text-transform:none" class="container unauthenticated">
-         <button class="loginBtn loginBtn--google">
-              Login with Google
-         </button>
-     </a>
-   </div>
+     <button onClick = 'location.href="ingredients"' class = "btn btn-primary">
+         Login with Google
+     </button>
    <div class="container authenticated" style="display: none">
        Logged in as: <span id="user"></span>
    </div>

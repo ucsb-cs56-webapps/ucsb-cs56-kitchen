@@ -5,9 +5,8 @@
    <#include "head.ftl" />
  </head>
  <body>
-   <#include "navbar.ftl"/>
    <h1>Recipes</h1>
-  <p>Here, a user would see a list of recipes found in our database.</p>
+  <p>These are all the possible recipes currently in our database</p>
   
   <style>
   
