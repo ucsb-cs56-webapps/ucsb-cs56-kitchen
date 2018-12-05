@@ -2,7 +2,7 @@
 <html>
  <head>
    <title>Kitchen Ingredients</title>
-   <script src="https://media.fshoq.com/images/189/tomatoes-and-basil-on-the-table-in-kitchen-189-small.jpg"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
 
    <!-- Compiled and minified CSS -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
@@ -11,7 +11,7 @@
  </head>
  <style>
    body {
-       background-image: url( "https://images.pexels.com/photos/326278/pexels-photo-326278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+       background-image: url( "https://media.fshoq.com/images/189/tomatoes-and-basil-on-the-table-in-kitchen-189-small.jpg");
        text-align: center;
        display: block;
        margin-left: auto;
