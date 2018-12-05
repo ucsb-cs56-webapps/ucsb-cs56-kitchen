@@ -17,7 +17,7 @@
    <script type="text/javascript" src="/webjars/js-cookie/js.cookie.js"></script>
    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
    <script src="/API.js"></script>
-<p id = "have">Im a text</p>
+
 <form>
 Select your ingredient:
 <select id="mySelect">
@@ -109,9 +109,16 @@ var list;
 	    ref.once("value")
    .then(function(snapshot) {
    list = snapshot.val();
-   document.getElementById("have").innerHTML = list.toString();
    });        
  });	
+for(var i = 0; i < list.length; i++){
+		   if(list[i]) {
+		   var table = document.getElementById("myTable");
+		   var row = table.insertRow(0);
+		   var cell = row.insertCell(0);
+		   cell.innertHTML = list[i];
+		   }
+}
 
 function unique(arr) {
     var u = {}, a = [];
