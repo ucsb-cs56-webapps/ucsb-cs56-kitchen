@@ -17,7 +17,7 @@
    <script type="text/javascript" src="/webjars/js-cookie/js.cookie.js"></script>
    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
    <script src="/API.js"></script>
-
+<p id = "have">Im a text</p>
 <form>
 Select your ingredient:
 <select id="mySelect">
@@ -101,6 +101,17 @@ Select your ingredient:
 
 
 <script>
+var list;
+   $.get("/user", function(data) {
+	    var id =data.userAuthentication.details.id;
+	    var email =data.userAuthentication.details.email;
+            var ref = firebase.database().ref('users/' + id + '/ingredients/');
+	    ref.once("value")
+   .then(function(snapshot) {
+   list = snapshot.val();
+   document.getElementById("have").innerHTML = list.toString();
+   });        
+ });	
 
 function unique(arr) {
     var u = {}, a = [];
@@ -111,10 +122,12 @@ function unique(arr) {
         }
     }
     return a;
-}
-var list = []  
+}   
 
-  function add1() {
+  
+
+function add1() {
+			       
     var x = document.getElementById("mySelect").value;
     var table = document.getElementById("myTable");
     var row = table.insertRow(0);
@@ -235,7 +248,7 @@ for (var x=rowCount-1; x>=0; x--) {
                   }
                 }
               });
-
+	   
           $.get("/user", function(data) {
 	    var id =data.userAuthentication.details.id;
 	    var email =data.userAuthentication.details.email;

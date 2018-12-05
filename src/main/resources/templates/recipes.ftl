@@ -13,7 +13,7 @@
   <p>These are all the possible recipes currently in our database</p>
 
   <script>
-
+    
    $.get("/user", function(data) {
 	    var id =data.userAuthentication.details.id;
 	    var email =data.userAuthentication.details.email;
@@ -22,8 +22,8 @@
    .then(function(snapshot) {
    var data = snapshot.val();
    document.getElementById("text").innerHTML = "Im not a text";
-   document.getElementById("text").innerHTML = data.toString() + "changed";
-   
+   document.getElementById("text").innerHTML = data.toString();
+
    });
           
     });
