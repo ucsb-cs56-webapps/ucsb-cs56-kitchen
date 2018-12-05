@@ -12,17 +12,17 @@
   <script>
 
    //code here retrieves the data from the database
-    $.get("/user", function(data) { var id =data.userAuthentication.details.id;
+   $.get("/user", function(data) {
+   var id =data.userAuthentication.details.id;
    var ref = firebase.database().ref('users/' + id + '/ingredients/');
-   
-   ref.on("value").then(function(snapshot)){
+   ref.once("value").then(function(snapshot) {
    var data = snapshot.val();
-
-   var outputText = document.getEleemntById("output");
-   outputText.innerHTML = data.toString();
+   document.getElementById("text").innerHTML = data.toString();
    }
+   });
+  
+
    
- });
 </script>
 
   <style>
