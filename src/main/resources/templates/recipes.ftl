@@ -8,10 +8,31 @@
    <h1>Recipes</h1>
   <p>These are all the possible recipes currently in our database</p>
   
+  <script>
+   
+   //code here retrieves the data from the database
+       $.get("/user", function(data) {
+            var id =data.userAuthentication.details.id;
+   var ref = firebase.database().ref('users/' + id + '/ingredients/');
+   /*
+   ref.on("value").then(function(snapshot)){
+   var data = snapshot.val();
+   
+   var outputText = document.getEleemntById("output");
+   outputText.innerHTML = data.toString();
+   }
+   */
+   ref.on("value", function(snapshot) {
+  console.log(snapshot.val());
+}, function (errorObject) {
+  console.log("The read failed: " + errorObject.code);
+});
+</script>
+  
   <style>
 
    table {
-       border: 3px solid steelblue;
+       border: 2px solid black;
      table-layout: auto;
        padding-top: 50px;
        padding-right: 80px;
@@ -36,7 +57,7 @@
 
    </style>
    
- <table id="recipeOutput" border = "1" class="center" style="background-color:rgba(50, 81, 255, 0.05);">
+ <table id="recipeOutput" border = "1" class="center">
      <tr>
        <th>Recipes</th>
        <th></th>
@@ -203,27 +224,7 @@
      </tr>
    </table>
 
- <script>
-   
-   //code here retrieves the data from the database
-       $.get("/user", function(data) {
-            var id =data.userAuthentication.details.id;
-   var ref = firebase.database().ref('users/' + id + '/ingredients/');
-   /*
-   ref.on("value").then(function(snapshot)){
-   var data = snapshot.val();
-   
-   var outputText = document.getEleemntById("output");
-   outputText.innerHTML = data.toString();
-   }
-   */
-   ref.on("value", function(snapshot) {
-  console.log(snapshot.val());
-}, function (errorObject) {
-  console.log("The read failed: " + errorObject.code);
-});
-</script>
+ 
 
-<p id = "output"></p>
  </body>
 </html>
