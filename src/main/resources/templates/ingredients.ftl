@@ -112,10 +112,7 @@ function unique(arr) {
     }
     return a;
 }
-
-var list = []
-
-
+var list = []  
 
   function add1() {
     var x = document.getElementById("mySelect").value;
@@ -264,7 +261,12 @@ for (var x=rowCount-1; x>=0; x--) {
 	      location.href='/';
             })
             return true;
-          }
+           }
+
+
+          
+    });
+  
 
     </script>
 </body>
