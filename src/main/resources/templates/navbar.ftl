@@ -18,9 +18,11 @@
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <div class="container authenticated" style="display: none, color: white">
-                    Logged in as: <span id="user"></span>
-                <div>
+              <a class=nav-link href="">
+                  <div class="container authenticated" style="display: none">
+                      Logged in as: <span id="user"></span>
+                  <div>
+              </a>
             </li>
             <li class="nav-item">
                 <button onClick="logout()" type="button">Logout </button>
