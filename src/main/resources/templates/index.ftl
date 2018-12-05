@@ -76,7 +76,6 @@
      <button onClick = 'location.href="ingredients"' class = "btn btn-primary">
          Login with Google
      </button>
-   </div>
    <div class="container authenticated" style="display: none">
        Logged in as: <span id="user"></span>
    </div>
