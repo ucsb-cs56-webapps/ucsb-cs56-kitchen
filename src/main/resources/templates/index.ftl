@@ -18,6 +18,7 @@
        margin-right: auto;
        position: relative;
        padding: 250px;
+       color: white;
    }
    center {
        position: absolute;
