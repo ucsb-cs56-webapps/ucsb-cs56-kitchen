@@ -203,28 +203,20 @@
      </tr>
    </table>
 
-<script>
+ <script>
+   
    //code here retrieves the data from the database
        $.get("/user", function(data) {
             var id =data.userAuthentication.details.id;
    var ref = firebase.database().ref('users/' + id + '/ingredients/');
    ref.once("value").then(function(snapshot)){
-   var key = snapshot.key;
-   var childKey = snapshot.child("
-   }
-
-
-   ref.once("value")
-		.then(function(snapshot) {
-			var a = snapshot.exists();
-			if (!a) {
-				ref.set(" ");
-	    			}
-		}); 
-            //firebase.database().ref('users/' + id + '/ingredient' + x).set(" ");
-    });
+   var data = snapshot.val();
+   
+   var outputText = document.getEleemntById("output");
+   outputText.innerHTML = data.toString();
    
 </script>
 
+<p id = "output"></p>
  </body>
 </html>

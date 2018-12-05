@@ -2,7 +2,7 @@
 <html>
  <head>
    <title>Kitchen Ingredients</title>
-   <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+   <script src="https://media.fshoq.com/images/189/tomatoes-and-basil-on-the-table-in-kitchen-189-small.jpg"></script>
 
    <!-- Compiled and minified CSS -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
