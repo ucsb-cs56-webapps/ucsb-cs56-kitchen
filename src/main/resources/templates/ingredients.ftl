@@ -11,12 +11,12 @@
    <#include "head.ftl" />
  </head>
  <body>
-   <#include "navbar.ftl"/>
+ 
+   <#include "navbar.ftl" />
+
    <script type="text/javascript" src="/webjars/js-cookie/js.cookie.js"></script>
    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
    <script src="/API.js"></script>
-   <button onclick = "location.href='recipes'" type = "button"> Go to Recipes </button>
-   <h1>This is Ingredients</h1>
 
 <form>
 Select your ingredient:
