@@ -114,7 +114,20 @@ function unique(arr) {
 }
 var list = []  
 
-  function add1() {
+    
+
+  
+
+function add1() {
+   $.get("/user", function(data) {
+	    var id =data.userAuthentication.details.id;
+	    var email =data.userAuthentication.details.email;
+            var ref = firebase.database().ref('users/' + id + '/ingredients/');
+	    ref.once("value")
+   .then(function(snapshot) {
+   list = snapshot.val();
+   });        
+ });				       
     var x = document.getElementById("mySelect").value;
     var table = document.getElementById("myTable");
     var row = table.insertRow(0);
@@ -235,7 +248,7 @@ for (var x=rowCount-1; x>=0; x--) {
                   }
                 }
               });
-
+	   
           $.get("/user", function(data) {
 	    var id =data.userAuthentication.details.id;
 	    var email =data.userAuthentication.details.email;
