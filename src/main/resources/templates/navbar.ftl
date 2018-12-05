@@ -55,9 +55,6 @@
 				ref.set(email);
 	    			}
 		});
-            $("#user").html(data.userAuthentication.details.email);
-            $(".unauthenticated").hide()
-            $(".authenticated").show()
           });
 
            var logout = function() {
