@@ -9,6 +9,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
+
 
 @SpringBootApplication
 @EnableOAuth2Sso
@@ -22,7 +24,14 @@ public class Application extends WebSecurityConfigurerAdapter {
 		    	.antMatchers("/login**", "/")
 			.permitAll()
 			.anyRequest()
-			.authenticated();
+			.authenticated()
+			.and()
+			.logout()
+			.logoutSuccessUrl("/")
+			.permitAll()
+			.and()
+			.csrf()
+			.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
 	}
 
 	public static void main(String[] args) {
