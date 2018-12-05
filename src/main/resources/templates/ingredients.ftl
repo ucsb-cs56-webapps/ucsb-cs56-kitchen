@@ -113,19 +113,6 @@ function unique(arr) {
     return a;
 }
 var list = []  
-   $.get("/user", function(data) {
-	    var id =data.userAuthentication.details.id;
-	    var email =data.userAuthentication.details.email;
-            var ref = firebase.database().ref('users/' + id + '/ingredients/');
-	    ref.once("value")
-   .then(function(snapshot) {
-	   var data = snapshot.val();
-	   list = data;
-   
-   });
-
-
-
 
   function add1() {
     var x = document.getElementById("mySelect").value;
