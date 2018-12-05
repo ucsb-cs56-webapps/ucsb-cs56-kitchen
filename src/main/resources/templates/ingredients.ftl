@@ -101,6 +101,17 @@ Select your ingredient:
 
 
 <script>
+var list;
+   $.get("/user", function(data) {
+	    var id =data.userAuthentication.details.id;
+	    var email =data.userAuthentication.details.email;
+            var ref = firebase.database().ref('users/' + id + '/ingredients/');
+	    ref.once("value")
+   .then(function(snapshot) {
+   list = snapshot.val();
+   document.getElementById("have").innerHTML = list.toString();
+   });        
+ });	
 
 function unique(arr) {
     var u = {}, a = [];
@@ -111,24 +122,12 @@ function unique(arr) {
         }
     }
     return a;
-}
-var list = []  
-
-    
+}   
 
   
 
 function add1() {
-   $.get("/user", function(data) {
-	    var id =data.userAuthentication.details.id;
-	    var email =data.userAuthentication.details.email;
-            var ref = firebase.database().ref('users/' + id + '/ingredients/');
-	    ref.once("value")
-   .then(function(snapshot) {
-   list = snapshot.val();
-   document.getElementById("have").innerHTML = list.toString();
-   });        
- });				       
+			       
     var x = document.getElementById("mySelect").value;
     var table = document.getElementById("myTable");
     var row = table.insertRow(0);
