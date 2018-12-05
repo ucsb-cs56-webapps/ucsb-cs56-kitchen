@@ -219,7 +219,7 @@
        <p><li>eggs</li></p>
        <p><li>cheese (Cheddar)</li></p>
        <p><li>ham</li></p>
-       <p><li>whipped cream</li></p>
+       <p><li>heavy whipping cream</li></p>
        <p><li>butter</li></p>
        </td>
      </tr>
