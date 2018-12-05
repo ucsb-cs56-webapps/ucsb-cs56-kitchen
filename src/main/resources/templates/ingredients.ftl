@@ -17,7 +17,7 @@
    <script type="text/javascript" src="/webjars/js-cookie/js.cookie.js"></script>
    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
    <script src="/API.js"></script>
-
+<p id = "have">Im a text</p>
 <form>
 Select your ingredient:
 <select id="mySelect">
@@ -126,6 +126,7 @@ function add1() {
 	    ref.once("value")
    .then(function(snapshot) {
    list = snapshot.val();
+   document.getElementById("have").innerHTML = list.toString();
    });        
  });				       
     var x = document.getElementById("mySelect").value;
