@@ -13,6 +13,14 @@ __Contributors__
     
     Zack Higgins
     
+    Christopher Lin
+    
+    Aditya Kalari
+    
+    Jun Hong
+    
+    Renny Honh
+    
     
 
 ******************************************************************************************************************************
@@ -24,7 +32,7 @@ __How to recreate this webapp__
     
     3. Update pom.xml to reflect your apps name
     
-    4. Create OAuth API and get keys to add to Heroku config
+    4. Create a project OAuth API via Google (https://console.cloud.google.com/apis/credentials) and get keys to add to Heroku config
     
     5. Create Firebase Application and intialize into API.JS
     
